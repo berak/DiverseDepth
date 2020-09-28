@@ -34,11 +34,11 @@ class lateral(nn.Module):
         self._init_modules(cfg.MODEL.INIT_TYPE)
 
     def _init_modules(self, init_type):
-        if cfg.MODEL.LOAD_IMAGENET_PRETRAINED_WEIGHTS:
-            if 'resnext' in cfg.MODEL.ENCODER.lower():
-                resnext_utils.load_pretrained_imagenet_resnext_weights(self.bottomup)
-            elif 'mobilenetv2' in cfg.MODEL.ENCODER.lower():
-                mobilenet_utils.load_pretrained_imagenet_resnext_weights(self.bottomup)
+        #if cfg.MODEL.LOAD_IMAGENET_PRETRAINED_WEIGHTS:
+        #    if 'resnext' in cfg.MODEL.ENCODER.lower():
+        #        resnext_utils.load_pretrained_imagenet_resnext_weights(self.bottomup)
+        #    elif 'mobilenetv2' in cfg.MODEL.ENCODER.lower():
+        #        mobilenet_utils.load_pretrained_imagenet_resnext_weights(self.bottomup)
 
         self._init_weights(init_type)
 
